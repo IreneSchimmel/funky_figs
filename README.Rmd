@@ -1,0 +1,11 @@
+---
+output: github_document
+---
+# blast_graph
+
+The purpose of the blast_graph function is to easily create a graph displaying the species in your BLAST+ output file.
+
+```{r blast_graph_example}
+library(funkyfigs)
+blast_graph("../sample_example.txt", 10)
+```
