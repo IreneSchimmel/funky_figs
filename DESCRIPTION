@@ -1,13 +1,15 @@
 Package: funkyfigs
-Title: What the Package Does (One Line, Title Case)
+Title: Make clear visualisations from (biological) data
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Irene",
+           family = "Schimmel",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "ireneschimmel@upcmail.nl",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: It can be quite some work to properly visualize or add to your analysed (biological) data. 
+            Especially when you just want a clear overview, but want to spend your time on further analysis instead of other things. 
+            Here comes funkyfigs! A package with functions designed to make your life easier in this regard.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -16,6 +18,8 @@ RoxygenNote: 7.1.1
 Imports: 
     dplyr,
     ggplot2,
+    kableExtra,
+    magrittr,
     purrr,
     readr,
     stringr,

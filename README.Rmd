@@ -1,11 +1,41 @@
 ---
 output: github_document
+always_allow_html: true
 ---
 # blast_graph
 
 The purpose of the blast_graph function is to easily create a graph displaying the species in your BLAST+ output file.
 
-```{r blast_graph_example}
+```{r blast_graph_example, warning=FALSE}
 library(funkyfigs)
-blast_graph("../sample_example.txt", 10)
+blast_graph("data/sample_example.txt", 10)
+```
+
+# spectophotography_boxplot
+
+The spectrophoto_boxplot function makes it easier to quickly generate a boxplot on your spectrophotography data.
+Note: for the example, no actual spectophotography data was used. It's just an example of what the output should look like.
+
+```{r spectrophoto_boxplot}
+library(funkyfigs)
+spectrophoto_boxplot(iris, iris$Species, iris$Sepal.Length)
+```
+
+# spectrophoto_bar
+
+The spectrophoto_bar function easily gives an overview of your spectrophotography measurements, per group.
+Note: for the example, no actual spectophotography data was used. It's just an example of what the output should look like.
+
+```{r spectrophoto_bar_example}
+library(funkyfigs)
+spectrophoto_bar(iris, iris$Species, iris$Sepal.Length)
+```
+
+# url_table
+
+Want to add some urls to your dataset, but it's too much of a hassle to put it per cell? url_table easily adds a column with the desired urls, per cell!
+
+```{r url_table_example}
+library(funkyfigs)
+url_table(iris, iris$Species, urls = c(rep(c("https://en.wikipedia.org/wiki/Iris_setosa"), times = 50), rep(c("https://en.wikipedia.org/wiki/Iris_versicolor"), times = 50), rep(c("https://en.wikipedia.org/wiki/Iris_virginica"), times = 50)))
 ```

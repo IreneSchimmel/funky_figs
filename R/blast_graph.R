@@ -8,6 +8,8 @@
 #' This function automatically generates a graph from BLAST+ input
 #' This way you'll see more easily what the composition is like.
 #'
+#' This function creates a column graph from BLAST output such as `gi|1850346067|gb|CP054159.1|,100.000,Klebsiella michiganensis`
+#'
 #' @import dplyr
 #' @import tidyverse
 #' @import ggplot2
@@ -41,7 +43,7 @@ blast_graph <- function(path, reads){
     ggplot(aes(x = name, y = n)) +
     geom_col(aes(fill = name), show.legend = FALSE) +
     theme(axis.text.x = element_text(angle=90)) +
-    labs(title = "Bar graph of the found bacteria",
+    labs(title = "Bar graph of the found species",
          subtitle = "Amount of reads per species",
          x = "Species",
          y = "Amount of reads",

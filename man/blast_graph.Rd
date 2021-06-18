@@ -18,3 +18,6 @@ column graph
 This function automatically generates a graph from BLAST+ input
 This way you'll see more easily what the composition is like.
 }
+\details{
+This function creates a column graph from BLAST output such as \verb{gi|1850346067|gb|CP054159.1|,100.000,Klebsiella michiganensis}
+}
